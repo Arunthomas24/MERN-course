@@ -1,0 +1,42 @@
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+title {
+  color: blue;
+  text-align: center;
+}
+.container {
+  border: 2px solid black;
+  background: yellow;
+  text-align: center;
+}
+#box {
+  border: 2px solid black;
+  background: orange;
+  text-align: center;
+}
+.text {
+  color: red;
+  font-size: 20px;
+  text-align: center;
+}
+aside {
+  border: 2px solid black;
+  background: lightblue;
+  text-align: center;
+}
+h4, h5, h6 {
+  color: green;
+  text-align: center;
+}
+div p {
+  color: purple;
+  font-size: 25px;
+  text-align: center;
+}
+h4:nth-child(2) {
+    color: rgb(31, 6, 193) !important;
+    text-align: left;
+} 
