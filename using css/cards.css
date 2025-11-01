@@ -1,0 +1,116 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(167, 161, 161, 0.24);
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+     
+}
+.card1{
+    margin-top: 60px;
+    height: 350px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 20px;
+    font-family: 'Segoe UI',  sans-serif;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(75, 71, 71, 0.1);
+
+}
+.card1:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.p1{
+    height: 250;
+    background:linear-gradient(red, #f45252cc);
+    text-align: center;
+    font-size: 100px;
+    border-bottom-left-radius: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.p2{
+    height: 250;
+    background:linear-gradient( rgb(231, 6, 167), #a21099cc);
+    text-align: center;
+    font-size: 100px;
+    border-bottom-left-radius: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+   
+}
+.p3
+{
+    height: 250;
+    background:linear-gradient(blue, #5c5cfc);
+    text-align: center;
+    font-size: 100px;
+    border-bottom-left-radius: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+   
+}
+.p4{
+    height: 250;
+    background:linear-gradient( green, #6bff6bcc);
+    text-align: center;
+    font-size: 100px;
+    border-bottom-left-radius: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #fff;
+}
+h2{
+    margin: 20px;
+    padding: 10px;
+
+}
+button{
+    margin-top: 10px;
+
+    height: 23px;
+    width: 100px;
+    color: #0f0f0fcc;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+.btn1{
+    background-color: red;
+
+}
+.btn2{
+    
+    background-color:rgb( 160, 18, 153);
+
+}
+.btn3{
+   
+    background-color:rgb(60, 15, 167);
+
+}
+.btn4{
+   
+    background-color:rgba(45, 199, 45, 0.767);
+}

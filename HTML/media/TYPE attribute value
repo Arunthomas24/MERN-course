@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>TYPE attribute value</title>
+</head>
+<body>
+    <h1>TYPE attribute value</h1>
+    <form action="">
+        <input type="password" placeholder="Enter your password">
+        <label>Reading:<input type="checkbox" name="Hobbies" ></label>
+        <label>Traveling:<input type="checkbox" name="Hobbies" ></label>
+        <label>Cooking:<input type="checkbox" name="Hobbies" ></label>
+        <label>Reading:<input type="radio" name="Hobbies" ></label>
+        <label>Traveling:<input type="radio" name="Hobbies" ></label>
+        <label>Cooking:<input type="radio" name="Hobbies" ></label>
+        <input type="line">
+        <input type="submit" name="" id="" value="Submitform">
+        <input type="reset" name="" id="" value="Resetform">
+        <input type="file">
+    </form>
+</body>
+</html>

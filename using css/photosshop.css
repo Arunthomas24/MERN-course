@@ -1,0 +1,64 @@
+
+*{
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+:root {
+    --c: rgb(255, 0, 0);
+    --bg: linear-gradient( #000, rgb(17, 17, 17));
+    --bg2: linear-gradient(rgb(255, 0, 0), rgb(139, 0, 0));
+    --border: red;
+    --hbg: linear-gradient(rgb(255, 69, 0), rgb(178, 34, 34));
+}
+body {
+     background-image: url("../Assets/img/temp1.jpeg") ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    flex-direction: column;
+}
+.container {
+    background: var(--bg);
+    display: flex;
+    font-size: 20px;
+    gap: 30px;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.content p {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(14, 165, 165);
+    text-shadow: 1px 1px 2px black;
+
+}
+.line {
+    position:relative;
+      display:inline-block;
+      padding:18px 36px;
+      color:var(--text);
+      letter-spacing:2px;
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:14px;
+      border-radius:6px;
+      background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+      cursor:pointer;
+        overflow:hidden;
+      box-shadow:0 6px 30px rgba(0,0,0,.45);
+
+}
+    

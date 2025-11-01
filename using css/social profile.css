@@ -1,0 +1,93 @@
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --c: rgb(53, 212, 21);
+    --bg: linear-gradient( #000, rgb(17, 17, 17));
+    --bg2: linear-gradient(rgb(30, 216, 36), rgb(9, 61, 18));
+    --border: aqua;
+    --hbg: linear-gradient(rgb(111, 27, 213), rgb(7, 78, 81));
+}
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 30px;
+    background: #000;
+
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background: var(--bg);
+    align-items: center;
+    border-radius: 5px;
+    gap: 10px;
+    color: azure;
+    box-shadow: 1px 1px 5px var(--c);
+}
+.card .img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--c);
+    border-radius: 50%;
+    box-shadow: 2px 3px 5px var(--c), -2px -3px 5px var(--c);
+
+
+}
+.card.img img
+{
+ width: 100px;
+    height: 100px;
+    border: 2px solid var(--c);
+    border-radius: 50%;
+
+
+}
+.card .content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    gap: 20px;
+}
+.card .icons {
+    display: flex;
+    gap: 10px;
+
+}
+.card .icons .icon {
+    width: 30px;
+    height: 30px;
+    background: pink;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+} 
+.btn {
+    width: 100%;
+   
+}
+.btn button {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    background: rgba(0, 0, blue, alpha);
+    border: 2px solid var(--border);
+    padding: 5px 0px;
+    color: var(--border);
+    transition: 0.3s;   
+
+}
+.btn button:hover {
+    border-right: 2px solid rgb(54, 228, 31);
+    border-bottom: 2px solid rgb(24, 47, 198);
+}
