@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Filter & Search</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { text-align: center; }
+    #searchBar {
+      width: 100%; max-width: 400px; padding: 10px;
+      margin: 20px auto; display: block; border: 1px solid #ccc; border-radius: 4px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ddd; border-radius: 8px; padding: 10px;
+      text-align: center; transition: transform 0.3s;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img {
+      width: 100%; height: 150px; object-fit: cover; border-radius: 6px;
+    }
+    .card h3 { margin: 10px 0; font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <h1>Product Filter & Search</h1>
+  <input type="text" id="searchBar" placeholder="Search products...">
+
+  <div class="products" id="productList">
+    <!-- Product cards will be injected here -->
+  </div>
+
+  <script>
+    // Product data (array of objects)
+    const products = [
+      { name: "Smartphone", image: "https://via.placeholder.com/200x150?text=Smartphone" },
+      { name: "Laptop", image: "https://via.placeholder.com/200x150?text=Laptop" },
+      { name: "Headphones", image: "https://via.placeholder.com/200x150?text=Headphones" },
+      { name: "Camera", image: "https://via.placeholder.com/200x150?text=Camera" },
+      { name: "Smartwatch", image: "https://via.placeholder.com/200x150?text=Smartwatch" },
+      { name: "Shoes", image: "https://via.placeholder.com/200x150?text=Shoes" },
+      { name: "Backpack", image: "https://via.placeholder.com/200x150?text=Backpack" },
+      { name: "Book", image: "https://via.placeholder.com/200x150?text=Book" },
+      { name: "T-Shirt", image: "https://via.placeholder.com/200x150?text=T-Shirt" },
+      { name: "Keyboard", image: "https://via.placeholder.com/200x150?text=Keyboard" }
+    ];
+
+    const productList = document.getElementById("productList");
+    const searchBar = document.getElementById("searchBar");
+
+    // Function to render products
+    function displayProducts(items) {
+      productList.innerHTML = "";
+      items.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${p.image}" alt="${p.name}">
+          <h3>${p.name}</h3>
+        `;
+        productList.appendChild(card);
+      });
+    }
+
+    // Initial display
+    displayProducts(products);
+
+    // Search filter
+    searchBar.addEventListener("keyup", (e) => {
+      const searchText = e.target.value.toLowerCase();
+      const filtered = products.filter(p => p.name.toLowerCase().includes(searchText));
+      displayProducts(filtered);
+    });
+  </script>
+
+</body>
+</html>
