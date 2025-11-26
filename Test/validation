@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    form { max-width: 400px; margin: auto; display: flex; flex-direction: column; }
+    input { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 10px; background: #333; color: #fff; border: none; cursor: pointer; }
+    button:hover { background: #f39c12; }
+    .error { color: red; font-size: 14px; margin-top: -8px; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+  <form id="myForm">
+    <label>Name:</label>
+    <input type="text" id="name">
+    <div id="nameError" class="error"></div>
+
+    <label>Email:</label>
+    <input type="email" id="email">
+    <div id="emailError" class="error"></div>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <div id="passwordError" class="error"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("myForm");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent form submission
+      let valid = true;
+
+      // Name validation
+      if (nameInput.value.trim() === "") {
+        nameError.textContent = "Name cannot be empty.";
+        valid = false;
+      } else {
+        nameError.textContent = "";
+      }
+
+      // Email validation (basic check)
+      if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
+        emailError.textContent = "Please enter a valid email.";
+        valid = false;
+      } else {
+        emailError.textContent = "";
+      }
+
+      // Password validation
+      if (passwordInput.value.length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters.";
+        valid = false;
+      } else {
+        passwordError.textContent = "";
+      }
+
+      if (valid) {
+        alert("Form submitted successfully!");
+      }
+    });
+  </script>
+
+</body>
+</html>
